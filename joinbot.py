@@ -73,7 +73,7 @@ def voice(bot, message):
 @app.on_message(filters.command('voice'))
 def command9(bot, message):
     bot.send_voice(message.chat.id, "CgACAgQAAxkBAAIBHWXtySQ3jSvgHVRp4M1mhJ5E_s8RAAKcBAACkDKkUZ9RIf9wIzrdHgQ")
-
+print("Hello")
 @app.on_message(filters.text)
 def delete (bot, message):
     word_list = ["Promotion"]
