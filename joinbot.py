@@ -83,8 +83,7 @@ def delete (bot, message):
 print("I am running")
 @app.on_message(filters.command('bot_version'))
 def version (bot, message):
-    bot.send_message(message.chat.id, "Bot Version ~ 1.1")
-
+    bot.send_text( "Bot Version ~ 1.1")
 print("I AM ALIVE")
 
 app.run()
