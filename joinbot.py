@@ -73,6 +73,18 @@ def voice(bot, message):
 @app.on_message(filters.command('voice'))
 def command9(bot, message):
     bot.send_voice(message.chat.id, "CgACAgQAAxkBAAIBHWXtySQ3jSvgHVRp4M1mhJ5E_s8RAAKcBAACkDKkUZ9RIf9wIzrdHgQ")
+
+@app.on_message(filters.text)
+def delete (bot, message):
+    word_list = ["Promotion"]
+    if message.text in word_list:
+        bot.delete_messages(message.chat.id, message.message_id)
+        bot.send_message(message.chat.id, "Blocklisted Word")
+
+@app.on_message(filters.command('bot_version'))
+def version (bot, message):
+    bot.send_message(message.chat.id, "Bot Version ~ 1.1")
+
 print("I AM ALIVE")
 
 app.run()
