@@ -80,7 +80,7 @@ def delete (bot, message):
     if message.text in word_list:
         bot.delete_messages(message.chat.id, message.message_id)
         bot.send_message(message.chat.id, "Blocklisted Word")
-
+print("I am running")
 @app.on_message(filters.command('bot_version'))
 def version (bot, message):
     bot.send_message(message.chat.id, "Bot Version ~ 1.1")
