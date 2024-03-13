@@ -81,11 +81,9 @@ def delete (bot, message):
         bot.delete_messages(message.chat.id, message.message_id)
         bot.send_message(message.chat.id, "Blocklisted Word")
 print("I am running")
-@app.on_message(filters.command('bot_version'))
+@app.on_message(filters.command('bot_version'), group=11)
 def version (bot, message):
-    print("Bot Version - 1.1")
-           
-    bot.send_message( "Bot Version ~ 1.1")
+    bot.send_message(message.chat.id, "Bot Version ~ 1.1")
 print("I AM ALIVE")
 
 app.run()
