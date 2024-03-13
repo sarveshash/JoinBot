@@ -1,11 +1,3 @@
-from pyrogram import Client, filters
-from pyrogram.types import Message, ChatMemberUpdated
-
-API_KEY = 20058505
-API_HASH = "c6416428be72db3174999c1740524b88"
-BOT_TOKEN = "6563744619:AAG4v_ABfLA3lCSGbcNLWlS07ZA_qUmseqM"
-
-app = Client("app name",api_id=API_KEY,api_hash=API_HASH,bot_token=BOT_TOKEN)
 
 @app.on_message(filters.command('start') & filters.private)
 def command1(bot,message):
@@ -84,6 +76,5 @@ print("I am running")
 @app.on_message(filters.command('bot_version'), group=2)
 def version (bot, message):
     bot.send_message(message.chat.id, "Bot Version ~ 1.1")
-print("I AM ALIVE")
 
 app.run()
