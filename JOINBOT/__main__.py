@@ -88,7 +88,7 @@ async def command9(bot, message):
 async def delete (bot, message):
     word_list = ["Promotion"]
     if message.text in word_list:
-        await bot.delete_messages(message.chat.id, message.message_id)
+        await message.delete()
         await bot.send_message(message.chat.id, "Blocklisted Word")
         return
 @app.on_message(filters.command('bot_version'), group=69)
